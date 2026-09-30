@@ -1,79 +1,131 @@
-1.  Answer the question no.1
+# 🚨 Emergency Service Directory
 
-    The difference between getElementById, getElementByClassName and querySelector / querySelectorAll:
+A responsive **Emergency Service Directory** web application that provides quick access to important emergency and public service helplines in Bangladesh.
 
-    - getElementById: getElementById is a fundamental part of Document object Model(DOM). its used to access a specific html element form a webpage by its unique id name.
+The project is designed to make emergency contact information easy to find, copy, and call from a single user-friendly interface.
 
-    Example: document.getElementById("name-of-id")
+## 🌐 Live Features
 
-    - getElementByClassName: getElementByClassName is a part of DOM. use to select html element base on their class names.Its returns a live HTML collection (an array like object) of all child element of bases the specific class names.
+* 📞 Call emergency service numbers
+* 📋 Copy hotline numbers
+* ❤️ Add services to favorites
+* 🪙 Coin counter for call interactions
+* 📜 Call history tracking
+* 🗑️ Clear call history
+* 📱 Responsive design for desktop, tablet, and mobile
+* 🎨 Clean and modern UI
 
-    Example: document.getElementByClassName("class-names")
+## 🛠️ Technologies Used
 
-    - querySelector: Its return the first element within the document that names matches the specific css selector. if matches no found, its return null. Its allows developers to easy to find and access element by CSS selector, such as IDs, tag names to then manipulate the content.
+* **HTML5**
+* **Tailwind CSS**
+* **DaisyUI**
+* **JavaScript**
+* **Font Awesome**
+* **CSS Grid & Flexbox**
 
-    example: document.querySelector(".main-content") #to get the first element with the name of class main-content.
+The project loads Tailwind CSS and DaisyUI through CDN and uses Font Awesome for interface icons.
 
-    querySelectorAll: Its return a static NodeList containing all elements within the document or the specific element that match given css selector or group selector.
+## 🚑 Available Services
 
-    example: document.querySelectorAll('.card).
+The directory includes several emergency and public service contacts:
 
-2.  Answer the question no.2
+| Service                     |     Hotline |
+| --------------------------- | ----------: |
+| National Emergency Number   |         999 |
+| Police Helpline             |         999 |
+| Fire Service                |         999 |
+| Ambulance Service           | 1994-999999 |
+| Women & Child Helpline      |         109 |
+| Anti-Corruption Helpline    |         106 |
+| Electricity Helpline        |       16216 |
+| BRAC Helpline               |       16445 |
+| Bangladesh Railway Helpline |         163 |
 
-    I show how to create and insert a new element into the DOM step by step.
+The service cards contain the service name, category, hotline number, copy button, call button, and favorite icon.
 
-    1. First we use the document.createElement() method and passing the html tag name. For example:
+## ✨ Main Features
 
-    const newParagraph = document.createElement("p")
+### 📞 Call Service
 
-    2. Then you can set the property like textContent or innerText to add content, and use method setAttribute() to add attributes. For example:
+Users can click the **Call** button to interact with a service hotline.
 
-    newParagraph.text = "Hello World"
-    newParagraph.setAttribute("id", "myNewText")
+### 📋 Copy Hotline Number
 
-    3. After all use the appendChild() method to on a parent element to add the new element. For example:
+The **Copy** button allows users to quickly copy a hotline number for later use.
 
-    document.body.appendChild(newParagraph); #add to the end of the body
+### ❤️ Favorite Services
 
-3.  Answer the question no.3
+Each service card contains a heart icon that can be used to mark important services as favorites.
 
-    Event bubbling is a javaScripts mechanism that triggered an event on a nested element. First runs its handler then propagates through its parent elements to the document object.
+### 📜 Call History
 
-        Example:
+The application includes a dedicated **Call History** section where previous calls can be displayed. Users can also clear the history using the **Clear** button.
 
-        HTML:
-        <div id="parent">
-            <button id="child"> Click </button>
-        </div>
+### 🪙 Coin Counter
 
-        JS:
-        document.getElementById("parent").addEventListener("click", function() {
-        console.log("Parent clicked");
-        });
+The interface includes a coin counter starting at **100**, along with counters for hearts and copied numbers.
 
-        document.getElementById("child").addEventListener("click", function() {
-        console.log("Child clicked");
-        });
+## 📁 Project Structure
 
-    When you clicked the child button then, "Child clicked" is logged.
-    Then, the event bubbles up to the parent div, "Parent clicked" is logged.
+```text
+Emergency-Service/
+│
+├── index.html
+├── script.js
+├── assets/
+│   ├── logo.png
+│   ├── logo-dark.png
+│   ├── heart.png
+│   ├── coin.png
+│   ├── emergency.png
+│   ├── police.png
+│   ├── fire-service.png
+│   ├── ambulance.png
+│   ├── brac.png
+│   └── Bangladesh-Railway.png
+│
+└── README.md
+```
 
+## 🚀 How to Run
 
-4. Answer the question no.4
+### 1. Clone the repository
 
-    Event delegation is a technic in JS for adding event listener to multiple child elements, you attached a single event listener to a parent element for triggered its children.
-    Its very helpful because, less memory usage and boost the performance to execution and its works even a new child elements are added later or keep clean the code.
+```bash
+git clone https://github.com/your-username/emergency-service.git
+```
 
+### 2. Open the project
 
-5. Answer the question no.5
+```bash
+cd emergency-service
+```
 
-    Difference between preventDefault() and stopPropagation() method:
+### 3. Run the project
 
-        *preventDefault(): preventDefault stops default action or behavior of an element. when its works then the element wll not navigate but event bubbling still happens.
+Open `index.html` in your browser.
 
-        *event.stopPropagation(): event.stopPropagation works for stops the event from bubbling up to parents, it does not prevent the default browser. 
+For a better development experience, you can use **VS Code with Live Server**.
 
-    After all we say that preventDefault() stop browser's default action like link navigation, form submission etc. And stopPropagation() stop event from bubbling up to parents.
+## 🎯 Project Purpose
 
+The purpose of this project is to create a simple and accessible emergency service directory where users can quickly find important helpline numbers without searching through multiple websites or documents.
 
+The header presents the project as an **Emergency Service Directory** for government emergency services in Bangladesh.
 
+## 📱 Responsive Design
+
+The interface uses responsive Tailwind CSS classes and a grid-based layout to adapt the service cards to different screen sizes.
+
+## 👨‍💻 Developer
+
+**Md. Asadulla Al Galib**
+
+Computer Science & Engineering Student
+
+Bangladesh
+
+## 📄 License
+
+This project is created for educational and portfolio purposes.
